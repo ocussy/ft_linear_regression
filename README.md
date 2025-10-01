@@ -15,14 +15,14 @@ We load the dataset containing car mileage (km) and price (price).
 
 Both input and output values are normalized to the range [0,1] to improve training stability:
 
-![MSE](https://latex.codecogs.com/svg.image?\large&space;&space;x_{norm}=\frac{x-x_{min}}{x_{max}-x_{min}})
+![MSE](https://latex.codecogs.com/svg.image?\large&space;{\color{White}x_{norm}=\frac{x-x_{min}}{x_{max}-x_{min}}})
 
-![MSE](https://latex.codecogs.com/svg.image?\large&space;&space;y_{norm}=\frac{y-y_{min}}{y_{max}-y_{min}})
+![MSE](https://latex.codecogs.com/svg.image?\large&space;&space;{\color{White}y_{norm}=\frac{y-y_{min}}{y_{max}-y_{min}}})
 #### 3. Mean Squared Error (MSE) Calculation
 
 The cost function measures the average squared difference between predicted and actual values:
 
-![MSE](https://latex.codecogs.com/svg.image?\large&space;&space;J(\theta_{0},\theta_{1})=\frac{1}{n}\sum_{i=1}^{n}\left(\widehat{y_{i}}-y_{i}\right)^{2})
+![MSE](https://latex.codecogs.com/svg.image?\large&space;\&space;{\color{White}J(\theta_{0},\theta_{1})=\frac{1}{n}\sum_{i=1}^{n}\left(\widehat{y_{i}}-y_{i}\right)^{2}})
 
 #### 4. Gradient Computation
 
@@ -30,17 +30,17 @@ Compute the gradients of the cost function with respect to the model parameters:
 
 **For the slope :**
 
-![MSE](https://latex.codecogs.com/svg.image?\large&space;\frac{\delta&space;J}{\delta\theta_{1}}=-\frac{2}{n}\sum_{i=1}^{n}x_{i}\cdot\left(y_{i}-\left(\theta_{1x_{i}}&plus;\theta_{0}\right)\right))
+![MSE](https://latex.codecogs.com/svg.image?\large&space;{\color{White}\frac{\delta&space;J}{\delta\theta_{1}}=-\frac{2}{n}\sum_{i=1}^{n}x_{i}\cdot\left(y_{i}-\left(\theta_{1x_{i}}&plus;\theta_{0}\right)\right)})
 
 **For the intercept :**
 
-![MSE](https://latex.codecogs.com/svg.image?\large&space;\frac{\delta&space;J}{\delta\theta_{0}}=-\frac{2}{n}\sum_{i=1}^{n}\left(y_{i}-\left(\theta_{1x_{i}}&plus;\theta_{0}\right)\right))
+![MSE](https://latex.codecogs.com/svg.image?\large&space;{\color{White}\frac{\delta&space;J}{\delta\theta_{0}}=-\frac{2}{n}\sum_{i=1}^{n}\left(y_{i}-\left(\theta_{1x_{i}}&plus;\theta_{0}\right)\right)})
 
 #### 5. Update Parameters and MSE
 
 The model parameters are updated using gradient descent:
 
-![MSE](https://latex.codecogs.com/svg.image?\large&space;\theta_{1}=\theta_{1}-\alpha\frac{\delta&space;J}{\delta\theta_{1}},\theta_{0}=\theta_{0}-\alpha\frac{\delta&space;J}{\delta\theta_{0}})
+![MSE](https://latex.codecogs.com/svg.image?\large&space;{\color{White}\theta_{1}=\theta_{1}-\alpha\frac{\delta&space;J}{\delta\theta_{1}},\theta_{0}=\theta_{0}-\alpha\frac{\delta&space;J}{\delta\theta_{0}}})
 
 The MSE is recalculated at each iteration until convergence.
 
@@ -48,9 +48,9 @@ The MSE is recalculated at each iteration until convergence.
 
 The predicted values are transformed back to the original scale:
 
-![MSE](https://latex.codecogs.com/svg.image?\large&space;\hat{x}=\hat{x}_{norm}\cdot\left(x_{max}-x_{min}\right)&plus;x_{min})
+![MSE](https://latex.codecogs.com/svg.image?\large&space;{\color{White}\hat{x}=\hat{x}_{norm}\cdot\left(x_{max}-x_{min}\right)&plus;x_{min}})
 
-![MSE](https://latex.codecogs.com/svg.image?\large&space;\hat{y}=\hat{y}_{norm}\cdot\left(y_{max}-y_{min}\right)&plus;y_{min})
+![MSE](https://latex.codecogs.com/svg.image?\large&space;{\color{White}\hat{y}=\hat{y}_{norm}\cdot\left(y_{max}-y_{min}\right)&plus;y_{min}})
 
 
 ## Installation
